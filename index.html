@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Бореалис | Клуб серфинга и обучение серфингу</title>
+  <meta name="description" content="Бореалис — школа серфинга с характером. Индивидуальные уроки, групповые занятия, серф-туры на Балтике." />
+  <meta property="og:title" content="Бореалис | Клуб серфинга" />
+  <meta property="og:description" content="Школа серфинга с характером. Вдохновение северными ветрами." />
+  <meta property="og:type" content="website" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+<!-- Progress bar -->
+<div class="progress-bar-top" id="progressBar"></div>
+
+<!-- Custom cursor -->
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-logo">БОРЕАЛИС</div>
+  <div class="preloader-bar"><div class="preloader-fill"></div></div>
+  <div class="preloader-tagline">покоряем волны севера</div>
+</div>
+
+<!-- Toast -->
+<div class="toast-custom" id="toast">
+  <div class="toast-icon">🏄</div>
+  <div class="toast-text" id="toastText">Ваша заявка отправлена!</div>
+</div>
+
+<!-- HEADER (Bootstrap navbar) -->
+<header class="site-header" id="header">
+  <div class="container">
+    <nav class="navbar-custom d-flex justify-content-between align-items-center">
+      <a href="#home" class="logo">
+        <div class="logo-icon"><i class="fas fa-water"></i></div>
+        БОРЕАЛИС
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="active">Главная</a>
+        <a href="#services">Услуги</a>
+        <a href="#trainers">Тренеры</a>
+        <a href="#contact">Контакты</a>
+        <button class="btn-nav" id="ctaNavBtn">🏄‍♂️ Записаться</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="wave-overlay">
+    <svg class="wave-svg" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+      <path fill="rgba(0,119,182,0.3)" d="M0,50 C360,100 720,0 1080,50 C1260,75 1350,62 1440,50 L1440,100 L0,100 Z"/>
+      <path fill="rgba(0,119,182,0.3)" d="M1440,50 C1080,100 720,0 360,50 C180,75 90,62 0,50 L0,100 L1440,100 Z"/>
+    </svg>
+    <svg class="wave-svg" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+      <path fill="rgba(0,65,120,0.5)" d="M0,60 C400,20 800,80 1200,40 C1320,25 1380,45 1440,60 L1440,100 L0,100 Z"/>
+      <path fill="rgba(0,65,120,0.5)" d="M1440,60 C1040,20 640,80 240,40 C120,25 60,45 0,60 L0,100 L1440,100 Z"/>
+    </svg>
+    <svg class="wave-svg" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+      <path fill="rgba(2,8,24,0.9)" d="M0,70 C360,30 720,90 1080,55 C1260,38 1350,60 1440,70 L1440,100 L0,100 Z"/>
+      <path fill="rgba(2,8,24,0.9)" d="M1440,70 C1080,30 720,90 360,55 C180,38 90,60 0,70 L0,100 L1440,100 Z"/>
+    </svg>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-eyebrow">СЕВЕРНОЕ СИЯНИЕ И СЕРФИНГ</div>
+    <h1>КЛУБ<br><span class="accent">СЕРФИНГА</span><br>БОРЕАЛИС</h1>
+    <p class="hero-sub">Почувствуй мощь океана, гармонию волн и северный характер. С нами ты укротишь первую волну.</p>
+    <div class="hero-cta">
+      <a href="#services" class="btn-hero primary">🔥 Наши услуги</a>
+      <a href="#trainers" class="btn-hero ghost">🌟 Наставники</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-value" data-count="2400">0</div>
+        <div class="hero-stat-label">Учеников</div>
+      </div>
+      <div>
+        <div class="hero-stat-value" data-count="12">0</div>
+        <div class="hero-stat-label">Лет опыта</div>
+      </div>
+      <div>
+        <div class="hero-stat-value" data-count="9">0</div>
+        <div class="hero-stat-label">Программ</div>
+      </div>
+      <div>
+        <div class="hero-stat-value" data-count="4">0</div>
+        <div class="hero-stat-label">Тренера</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-wheel"><div class="scroll-dot"></div></div>
+    <span>SCROLL</span>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<!-- SERVICES (Bootstrap grid) -->
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="services-header reveal">
+      <div class="section-label">// ПРОГРАММЫ</div>
+      <h2 class="section-title">ОКЕАН ВОЗМОЖНОСТЕЙ</h2>
+      <p class="section-sub">9 уникальных форматов — от первых шагов до серф-туров по лучшим спотам</p>
+    </div>
+    <div id="servicesContainer" class="row g-4"></div>
+  </div>
+</section>
+
+<!-- STATS (Bootstrap grid) -->
+<div class="stats-section reveal">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-6 col-md-3">
+        <div class="stat-block">
+          <div class="stat-number" data-count="98">0</div>
+          <div class="stat-label">% довольных учеников</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-block">
+          <div class="stat-number" data-count="350">0</div>
+          <div class="stat-label">занятий в год</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-block">
+          <div class="stat-number" data-count="30">0</div>
+          <div class="stat-label">спотов в базе</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-block">
+          <div class="stat-number" data-count="15">0</div>
+          <div class="stat-label">наград и сертификатов</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRAINERS (Bootstrap grid) -->
+<section id="trainers" class="trainers-section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">// КОМАНДА</div>
+      <h2 class="section-title">ЛЕГЕНДАРНЫЕ ТРЕНЕРЫ</h2>
+      <p class="section-sub">Профессионалы с горящими сердцами, которые влюбят в серфинг с первой волны</p>
+    </div>
+    <div class="row g-4 mt-2" id="trainersContainer"></div>
+  </div>
+</section>
+
+<!-- CONTACT (Bootstrap grid) -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="reveal mb-5">
+      <div class="section-label">// КОНТАКТ</div>
+      <h2 class="section-title">НАЧНИ СЕГОДНЯ</h2>
+      <p class="section-sub">Оставь заявку — подберём программу под твой уровень и расписание</p>
+    </div>
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-6">
+        <div class="contact-form reveal" id="contactForm">
+          <div class="form-group mb-3">
+            <label class="form-label-custom">Имя</label>
+            <input type="text" class="form-input" id="formName" placeholder="Твоё имя" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label-custom">Телефон</label>
+            <input type="tel" class="form-input" id="formPhone" placeholder="+7 (___) ___-__-__" />
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label-custom">Программа</label>
+            <select class="form-input" id="formProgram">
+              <option value="">Выбери программу</option>
+            </select>
+          </div>
+          <div class="form-group mb-3">
+            <label class="form-label-custom">Сообщение</label>
+            <textarea class="form-textarea" id="formMessage" placeholder="Расскажи о себе и своём уровне..."></textarea>
+          </div>
+          <button class="btn-submit w-100" id="formSubmitBtn">🌊 Отправить заявку</button>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal">
+        <div class="contact-info">
+          <div class="contact-item d-flex align-items-start gap-3">
+            <div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <div class="contact-item-label">Телефон</div>
+              <div class="contact-item-value">+7 (999) 123-45-67</div>
+            </div>
+          </div>
+          <div class="contact-item d-flex align-items-start gap-3">
+            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value">hello@borealis-surf.ru</div>
+            </div>
+          </div>
+          <div class="contact-item d-flex align-items-start gap-3">
+            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="contact-item-label">Локация</div>
+              <div class="contact-item-value">Калининградская обл.,<br>Балтийская коса</div>
+            </div>
+          </div>
+          <div class="contact-item d-flex align-items-start gap-3">
+            <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="contact-item-label">Режим работы</div>
+              <div class="contact-item-value">Пн-Вс: 08:00 – 20:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (Bootstrap grid) -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4 mb-4">
+      <div class="col-12 col-md-4">
+        <div class="footer-logo">БОРЕАЛИС</div>
+        <div class="footer-tagline">Школа серфинга с характером. Вдохновение северными ветрами.</div>
+        <div class="footer-social d-flex gap-2 mt-3">
+          <a href="#"><i class="fab fa-vk"></i></a>
+          <a href="#" style="font-weight:800; font-size:0.7rem; display:flex; align-items:center; justify-content:center;">MAX</a>
+        </div>
+      </div>
+      <div class="col-6 col-md-2 offset-md-2">
+        <h4 class="footer-col-title">Программы</h4>
+        <ul class="footer-list">
+          <li><a href="#">Индивидуально</a></li>
+          <li><a href="#">Групповые</a></li>
+          <li><a href="#">Детский клуб</a></li>
+          <li><a href="#">Серф-туры</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2">
+        <h4 class="footer-col-title">Компания</h4>
+        <ul class="footer-list">
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Тренеры</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">Партнёры</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2">
+        <h4 class="footer-col-title">Поддержка</h4>
+        <ul class="footer-list">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Прокат</a></li>
+          <li><a href="#">Политика</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">© 2025 Клуб серфинга и обучение серфингу «Бореалис».</div>
+  </div>
+</footer>
+
+<!-- MODAL (Bootstrap Modal) -->
+<div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-card">
+      <button type="button" class="modal-close" data-bs-dismiss="modal" id="closeModalBtn">✕</button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <div class="modal-title-custom" id="modalTitle"></div>
+      <div class="modal-price" id="modalPrice"></div>
+      <div class="modal-desc" id="modalDescription"></div>
+      <button class="modal-btn" id="modalBookBtn">🏄 Записаться сейчас</button>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap 5 JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
